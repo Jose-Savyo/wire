@@ -498,33 +498,42 @@
     max-width: 600px;
   }
 
-    /* Seção do Banner */
+/* Seção do Banner */
 .banner-section {
   position: relative;
   width: 100%;
-  height: auto;
+  height: auto; /* Altura será dinâmica */
   overflow: hidden;
 }
 
-.banner-image {
+.banner-container {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
+  height: 500px; /* Altura padrão para desktop */
 }
 
-/* Media Queries */
+.banner-image {
+  width: 100%; /* Ocupar 100% da largura */
+  height: 100%; /* Ocupar 100% da altura do contêiner */
+  object-fit: contain; /* Garante que a imagem inteira apareça sem cortes */
+}
+
+/* Media Queries para Telas Menores */
+
+/* Tablets */
 @media (max-width: 768px) {
-  .banner-image {
-    max-height: 300px;
+  .banner-container {
+    height: 300px; /* Reduz altura para tablets */
   }
 }
 
+/* Smartphones */
 @media (max-width: 480px) {
-  .banner-image {
-    max-height: 200px;
+  .banner-container {
+    height: 200px; /* Reduz altura para celulares */
   }
 }
+
 
 
 /* Seção de Contatos - Fundo Branco e Texto Azul */
