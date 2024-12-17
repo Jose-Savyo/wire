@@ -498,53 +498,33 @@
     max-width: 600px;
   }
 
-  /* Seção de Banner */
-  .banner-section {
-    position: relative;
-    width: 4000px;
-    height: 2000px; /* Altura fixa */
-    overflow: hidden;
-  }
+    /* Seção do Banner */
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
 
-  .banner-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+.banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
 
+/* Media Queries */
+@media (max-width: 768px) {
   .banner-image {
-    width: 100%; /* A imagem ocupará 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção original */
-    max-height: 500px; /* Limita a altura máxima */
-    object-fit: cover; /* Corta o excesso da imagem sem distorcer */
+    max-height: 300px;
   }
+}
 
-
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3); /* Fundo escuro transparente */
-    color: white;
-    padding: 20px;
+@media (max-width: 480px) {
+  .banner-image {
+    max-height: 200px;
   }
-
-  .banner-overlay h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-
-  .banner-overlay p {
-    font-size: 1.2rem;
-    margin-top: 0;
-  }
+}
 
 
 /* Seção de Contatos - Fundo Branco e Texto Azul */
