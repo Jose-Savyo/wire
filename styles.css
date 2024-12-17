@@ -502,47 +502,42 @@
 .banner-section {
   position: relative;
   width: 100%;
-  height: auto; /* Altura será dinâmica */
+  height: 500px; /* Altura fixa do banner */
   overflow: hidden;
 }
 
 .banner-container {
   position: relative;
   width: 100%;
-  height: 500px; /* Altura padrão para desktop */
+  height: 100%;
 }
 
 .banner-image {
-  width: 100%; /* Ocupar 100% da largura */
-  height: 100%; /* Ocupar 100% da altura do contêiner */
-  object-fit: contain; /* Garante que a imagem inteira apareça sem cortes */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100%; /* Altura total do banner */
+  object-fit: cover; /* Garante que a imagem preencha sem distorcer */
 }
+
+/* Overlay do Texto */
 .banner-overlay {
   position: absolute;
-  top: 50%; /* Move o topo do texto para o meio */
-  left: 50%; /* Move o texto horizontalmente para o centro */
-  transform: translate(-50%, -50%); /* Corrige o alinhamento exato para o centro */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Corrige o ponto de referência */
+  text-align: center; /* Alinha o texto no centro */
   color: white; /* Cor do texto */
-  background: rgba(0, 0, 0, 0.3); /* Fundo escuro transparente */
-  width: 100%; /* Garante que a largura cubra a imagem */
-  height: 100%; /* Garante que a altura cubra a imagem */
-  padding: 20px;
 }
 
 .banner-overlay h2 {
-  font-size: 2.5rem;
-  margin: 0 0 10px 0; /* Espaçamento inferior */
+  font-size: 3rem; /* Tamanho do título */
+  margin: 0; /* Remove margens extras */
 }
 
 .banner-overlay p {
-  font-size: 1.2rem;
-  margin: 0;
+  font-size: 1.2rem; /* Tamanho do parágrafo */
+  margin: 10px 0 0; /* Ajusta espaçamento */
 }
+
 
 /* Media Queries para Telas Menores */
 
