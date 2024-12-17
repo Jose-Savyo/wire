@@ -513,10 +513,12 @@
   }
 
   .banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção original */
+    max-height: 500px; /* Limita a altura máxima */
+    object-fit: cover; /* Corta o excesso da imagem sem distorcer */
   }
+
 
   .banner-overlay {
     position: absolute;
