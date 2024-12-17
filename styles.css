@@ -325,58 +325,32 @@
   }
   
   /* Slideshow Container */
-.slideshow-container {
+  .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
   }
-  
-  /* Slide */
+
+  /* Slides */
   .slide {
-    display: none;
-    position: relative;
+    display: none; /* Oculta os slides inicialmente */
   }
-  
-  .slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+
+  /* Fade Animation */
+  .fade {
+    animation: fadeEffect 1.5s ease-in-out;
   }
-  
-  .slide-content {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 40%;
+
+  @keyframes fadeEffect {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  
-  .slide-content h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .slide-content p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
+
   
   /* Navigation Dots */
   .dots-container {
@@ -406,15 +380,12 @@
   .fade {
     animation: fadeEffect 1.5s;
   }
-  
+
   @keyframes fadeEffect {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0.4; }
+    to { opacity: 1; }
   }
+
 
 
   /* Serviços Container */
@@ -426,130 +397,154 @@
     background-color: #f9f9f9;
   }
   
+  /* Serviços Container */
+  .services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
   /* Cartão de Serviço */
   .service-card {
     background-color: white;
-    width: 22%;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+    width: 300px; /* Largura fixa do cartão */
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
   }
-  
+
   .service-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    width: 300px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    object-fit: contain; /* Garante que a imagem inteira apareça sem cortes */
+    background-color: #f0f0f0; /* Cor de fundo para o espaço vazio */
+    border-bottom: 1px solid #ddd;
   }
   
+
   .service-card h3 {
     font-size: 18px;
+    margin: 15px 0;
     color: #333;
-    margin: 15px 0;
   }
-  
-  .service-card p {
-    font-size: 14px;
-    color: #666;
-    margin: 10px 0;
-  }
-  
-  .service-card .price {
-    font-size: 16px;
-    font-weight: bold;
-    color: orange;
-  }
-  
-  .service-card ul {
-    list-style: none;
-    text-align: left;
-    padding: 0 20px;
-    margin: 10px 0;
-  }
-  
-  .service-card ul li {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  
+
   .service-card .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
     margin: 15px 0;
   }
-  
+
   .service-card .btn {
     display: inline-block;
     padding: 10px 15px;
-    color: white;
     background-color: #007bff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
   }
-  
+
   .service-card .btn:hover {
     background-color: #0056b3;
   }
-  
-  .service-card .learn-more {
-    color: #007bff;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .service-card .learn-more:hover {
-    text-decoration: underline;
-  }
 
   
-  /* Video Section */
-.video-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .video-container {
+  /* Seção de Vídeo */
+  .video-section {
     position: relative;
     width: 100%;
     height: 500px;
+    overflow: hidden;
   }
-  
-  .video-container video {
+
+  .video-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
-  
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
   .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Escurecimento para destaque do texto */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
     padding: 20px;
   }
-  
+
   .video-overlay h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
   }
-  
+
   .video-overlay p {
     font-size: 1.2rem;
     max-width: 600px;
   }
 
-  
+  /* Seção de Banner */
+  .banner-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura fixa */
+    overflow: hidden;
+  }
+
+  .banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3); /* Fundo escuro transparente */
+    color: white;
+    padding: 20px;
+  }
+
+  .banner-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-overlay p {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+
+
 /* Seção de Contatos - Fundo Branco e Texto Azul */
 .contact-section {
     background-color: #ffffff; /* Fundo branco */
