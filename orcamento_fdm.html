@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitação de Orçamento</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Conexão com o CSS principal -->
+</head>
+<body>
+  <!-- Seção de Orçamento -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <!-- Imagem à Esquerda -->
+      <div class="quote-image">
+        <img src="services/orcamento_fdm.png" alt="Solicite um Orçamento">
+      </div>
+
+      <!-- Formulário à Direita -->
+      <div class="quote-form">
+        <h2>Solicite um Orçamento</h2>
+        <form id="quote-form" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="email" placeholder="E-mail *" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Nome *" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Número para contato *" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Descreva os detalhes do projeto:" rows="4"></textarea>
+          </div>
+          <div class="form-group upload-group">
+            <label for="stl-file">Faça o upload do seu arquivo (.stl, .ipt, .step, .dwg, .pdf):</label>
+            <input type="file" id="file-upload" name="file-upload" accept=".stl, .ipt, .step, .dwg, .pdf" multiple required>
+            <small>Somente arquivos .stl, .ipt, .step, .dwg e .pdf são permitidos.</small>
+          </div>
+          
+          <button type="submit" class="submit-btn">Enviar Solicitação</button>
+          <p id="success-message" style="display: none; color: green; text-align: center;">
+            Solicitação enviada com sucesso! Entraremos em contato em breve.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById("quote-form");
+    const successMessage = document.getElementById("success-message");
+    const fileInput = document.getElementById("file-upload");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const allowedExtensions = [".stl", ".ipt", ".step", ".dwg", ".pdf"];
+      const files = fileInput.files;
+      let valid = true;
+  
+      for (const file of files) {
+        const fileExtension = file.name.split('.').pop().toLowerCase();
+        if (!allowedExtensions.includes(`.${fileExtension}`)) {
+          valid = false;
+          break;
+        }
+      }
+  
+      if (valid) {
+        successMessage.style.display = "block";
+        form.reset();
+      } else {
+        alert("Por favor, envie apenas arquivos nos formatos: .stl, .ipt, .step, .dwg ou .pdf.");
+      }
+    });
+  </script>
+  
+</body>
+</html>
