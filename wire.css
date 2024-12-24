@@ -1,0 +1,234 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 300vh; /* Define altura grande para rolagem */
+    position: relative;
+}
+
+.section {
+    position: sticky;
+    top: 0; /* Ponto inicial de "fixação" */
+    height: 100vh; /* Cada seção ocupa a altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    z-index: 1; /* Garante que as seções se sobreponham corretamente */
+    transition: background-color 0.3s ease;
+}
+
+.parallax-container {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax-section {
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed; /* Cria o efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+h1, h2, h3 {
+    color: #007bff;
+}
+
+/* Seção do Vídeo */
+.video-section {
+    position: relative;
+    width: 100vw; /* 100% da largura da janela */
+    height: 70vh; /* 100% da altura da janela */
+    overflow: hidden; /* Garante que nada fique fora da área visível */
+    background-color: black; /* Cor de fundo para transições suaves */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover; /* Garante que o vídeo cubra toda a área sem distorção */
+}
+
+
+/* Seção de Boas-Vindas */
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+    .welcome-section p {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+/* Seção Missão */
+.mission-section {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+    .mission-section p {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+/* Seção O Que Fazemos */
+.what-we-do-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+    .what-we-do-section ul {
+        list-style: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+        .what-we-do-section ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+/* Seção Por Que Escolher */
+.why-choose-us-section {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+    .why-choose-us-section ul {
+        list-style: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+        .why-choose-us-section ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+/* Seção Visão */
+.vision-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+    .vision-section p {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+/* Seção Automação */
+.automation-section {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+    .automation-section p {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+/* Seção Junte-se */
+.join-us-section {
+    padding: 50px 20px;
+    background-color: #007bff;
+    text-align: center;
+    color: #ffffff;
+}
+
+    .join-us-section h2 {
+        color: #ffffff; /* Deixa o texto "Junte-se a nós" em branco */
+    }
+
+    .join-us-section a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+        .join-us-section a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .video-section {
+        height: 300px; /* Altura menor para dispositivos pequenos */
+    }
+
+    .presentation-video {
+        height: 300px; /* Ajusta altura do vídeo */
+    }
+
+    .welcome-section, .mission-section, .what-we-do-section, .why-choose-us-section, .vision-section, .automation-section, .join-us-section {
+        padding: 30px 10px; /* Reduz o padding lateral */
+    }
+
+        .join-us-section a {
+            font-size: 16px; /* Botão menor para caber na tela */
+        }
+}
+
+@media (max-width: 480px) {
+    .presentation-video {
+        height: 200px; /* Ajusta ainda mais o vídeo para celulares pequenos */
+    }
+
+    .what-we-do-section ul, .why-choose-us-section ul {
+        padding: 0 10px; /* Margem lateral menor para listas */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Reduz títulos para evitar cortes */
+    }
+
+    p {
+        font-size: 1rem; /* Texto levemente menor para leitura confortável */
+    }
+
+    .join-us-section a {
+        padding: 8px 15px; /* Botão menor */
+    }
+}
+
