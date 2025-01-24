@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Top Header */
+  .top-header {
+    background-color: #f8f9fa;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .top-header a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .top-header a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main Header */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .main-header img {
+    height: 40px;
+  }
+  
+  .main-header nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .main-header nav a:hover {
+    color: #007bff;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .header-right a:hover {
+    text-decoration: underline;
+  }
+  
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-icon span {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+
+/* Página do Artigo */
+.article-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Cabeçalho do Artigo */
+  .article-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .article-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .article-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Imagem Destacada */
+  .featured-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .featured-image img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Texto do Artigo */
+  .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    color: #333;
+  }
+  
+  .article-content p {
+    margin-bottom: 15px;
+  }
+  
+  /* Rodapé */
+  .article-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
