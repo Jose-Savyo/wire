@@ -858,18 +858,28 @@
   color: #666;
 }
 
-/* Imagem Destacada */
-.featured-image {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+/* Imagem Destacada - Limitação de tamanho */
+.featured-image img {
+  max-width: 90%; /* Limita a largura máxima a 90% da largura da tela */
+  height: auto; /* Mantém a proporção original */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin: 0 auto; /* Centraliza a imagem */
 }
 
-.featured-image img {
-  max-width: 90%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+/* Ajuste de tamanho da imagem na página inicial */
+.section-container img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção original */
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .featured-image img,
+  .section-container img {
+    max-width: 100%; /* Usa 100% da largura disponível */
+    height: auto; /* Mantém a proporção */
+  }
 }
 
 /* Texto do Artigo */
