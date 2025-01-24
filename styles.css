@@ -118,6 +118,78 @@
     to {opacity: 1}
   }
   
+  /* Nova Seção Sobre */
+
+/* Tornar a seção clicável */
+.about-link {
+  text-decoration: none;
+}
+
+.about-link:hover .about-section {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  cursor: pointer;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+
+
   /* Cards Section */
   .services-container {
     display: flex;
@@ -759,6 +831,66 @@
     }
   }
 
-  
+  /* Página do Artigo */
+.article-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho do Artigo da virtus cc */
+.article-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.article-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Imagem Destacada */
+.featured-image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.featured-image img {
+  max-width: 90%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Texto do Artigo */
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  color: #333;
+}
+
+.article-content p {
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+.article-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
   
   
